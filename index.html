@@ -67,20 +67,39 @@
 
 <body class="bg-dark">
 
-
   <style>
         body {
             background-color: #181818;
         }
         .navbar {
             background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 10px 20px;
         }
         .nav-link {
             color: white !important;
+            margin: 0 15px; /* Increased space between buttons */
             transition: 0.3s ease-in-out;
         }
         .nav-link:hover, .nav-link.active {
             color: #00aaff !important;
+        }
+        .points-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .points-display {
+            background-color: #00aaff;
+            color: white;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 20px; /* Smooth rounded corners */
+            border: 1px solid white; /* Thin white border */
+        }
+        .logo-small {
+            width: 36px;
+            height: 36px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -95,7 +114,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav mx-auto"> <!-- Center buttons -->
                 <li class="nav-item">
                     <a class="nav-link active" href="#" onclick="setActive(this)">Home</a>
                 </li>
@@ -107,6 +126,10 @@
                 </li>
             </ul>
         </div>
+        <div class="points-container">
+            <img src="small-logo.png" alt="Logo" class="logo-small"> <!-- Replace with actual small logo -->
+            <span class="points-display">250</span> <!-- Example points -->
+        </div>
     </div>
 </nav>
 
@@ -116,9 +139,6 @@
         element.classList.add('active');
     }
 </script>
-
-
-
   <script src="pj1/js/jquery-3.7.1.min.js"></script>
   <script src="pj1/js/bootstrap.js"></script>
 
