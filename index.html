@@ -68,101 +68,54 @@
 <body class="bg-dark">
 
 
+  <style>
+        body {
+            background-color: #181818;
+        }
+        .navbar {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+        }
+        .nav-link {
+            color: white !important;
+            transition: 0.3s ease-in-out;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #00aaff !important;
+        }
+    </style>
+</head>
+<body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand text-info" href="#" >Damas-Charge</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-           
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">login</a>
-          </li>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Damas-Charge Logo" height="40"> <!-- Replace with actual logo -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" onclick="setActive(this)">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="setActive(this)">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="setActive(this)">Wallet</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="ابحث هنا..." aria-label="Search">
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-        <br>
-        <div> 
-          <div > 
-            <h2 class="mb-4">apps</h2>
-             <div class="row ">
-              <div class="col">
-                <div class="card">
-                  <img src="photos/joystick.png" class="card-img" alt="">
-                  <div class="card-body">
-                   
-                    <p class="card-text">test</p>
-                    <div class="btn btn-success"><a href="" id="a1" alt=""> charge</div></a>
-                 
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="photos/joystick.png" class="card-img" alt="">
-                  <div class="card-body">
-                   
-                    <p class="card-text">test</p>
-                    <div class="btn btn-success"><a href="" id="a1" alt=""> charge</div></a>
-                   
-                    
-                  </div>
-                </div>
-              </div>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script>
+    function setActive(element) {
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+        element.classList.add('active');
+    }
+</script>
 
 
 
